@@ -1,0 +1,23 @@
+{
+  "name": "restful-server",
+  "version": "1.0.0",
+  "description": "This package contains all the necessary packages for the Remote Server to work.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cardosomartins/RESTful-Server.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "Server"
+  ],
+  "author": "Paulo Henrique Cardoso Martins",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cardosomartins/RESTful-Server/issues"
+  },
+  "homepage": "https://github.com/cardosomartins/RESTful-Server#readme"
+}
