@@ -1,10 +1,12 @@
 //const http = require("http");
 const express = require("express");
+const consign = require("consign");
 const hostname = '127.0.0.1';
 const port = 4000;
 const app = express();
-const consign = require("consign");
 
+
+consign().include('routes').into(app);
 // const server = http.createServer((req, res) => {
 //     res.statusCode = 200;
 //     res.setHeader('Content-Type', 'text/plain');
@@ -21,12 +23,17 @@ const consign = require("consign");
 //     }
 // });
 
-app.get("/", (req, res) => {
+app.get("/", (req, res, next) => {
+    console.log("Hakuna matata");
+    next();
+})
+app.get("/", (req, res, next) => {
     res.end("There's nothing to look for in here");
+    next();
 })
 
 app.get("/secret", (req, res) => {
-    res.end("Hello, you have found the secret to everything");
+    res.end("Hello, you have found the secret to everything!");
 })
 
 // server.listen(port, hostname, () => {
