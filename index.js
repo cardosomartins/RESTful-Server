@@ -6,7 +6,10 @@ const port = 4000;
 const app = express();
 
 
-consign().include('routes').into(app);
+consign()
+    .include('./routes')
+    .include('./api')
+    .into(app);
 // const server = http.createServer((req, res) => {
 //     res.statusCode = 200;
 //     res.setHeader('Content-Type', 'text/plain');
