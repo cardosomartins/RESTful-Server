@@ -3,7 +3,7 @@ module.exports = (app) => {
     app.get('/', (req, res) => res.send("HEy mothafucka"));
     app.get('/ameba', (req, res) => res.send("Hey amebafucka"));
     app.post('/postTest', (req, res) => {
-        res.send(`Hey amebafucka: ${req.body}`)
+        res.send(`Hey amebafucka: ${JSON.stringify(req.body)}`)
     });
 
 
