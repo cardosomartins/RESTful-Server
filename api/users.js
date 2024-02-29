@@ -1,6 +1,13 @@
+const NeDB = require('nedb');
+
+let db = new NeDB({
+    filename:'users.db',
+    autoload:true
+})
+
 module.exports = (app) => {
 
-const get = (req, res) => {
+get = (req, res) => {
     const users = [
         {
             "id": 1,

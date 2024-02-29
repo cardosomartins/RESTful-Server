@@ -7,9 +7,9 @@ const port = 4000;
 const app = express();
 
 
+
 app.use(bodyParser.urlencoded({ extended: false}))
 app.use(bodyParser.json());
-
 consign()
     .include('./routes')
     .include('./api')
